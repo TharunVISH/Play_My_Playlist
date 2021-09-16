@@ -1,0 +1,74 @@
+
+.MainContainer{
+    width: 100%;
+    text-align: center;
+  }
+
+  /*--------Home Page Heading----------*/
+  .HomePageHead1{
+      font-size: 50px;
+    }
+  .HomePageHead2{
+      font-size: 20px;
+    }
+  .UnderLine{
+      width: 80%;
+      max-width: 500px;
+      min-height: 2px;
+      background-color: #475ee6;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 10px;
+    }
+  /*-----------------------------------*/  
+
+
+  /*----Create and Join Button Styling-----*/
+  .BtnCreateJoinRoom{
+    height: 300px;
+    width: 350px;
+    margin: 50px;
+  
+  }
+
+    .BtnHead{
+      font-size: 40px;
+      text-align: left;
+      
+    }
+    .BtnCaption{
+      
+      font-size: 30px;
+      text-align: left;
+    }
+
+    /*-----------Style the Arrow Image used inside buttons-------------*/
+    .ArrowImage{
+      max-width: 175px;
+      }                     /*Same class name is used for Arrow Image in the button How To Play*/
+    .ArrowImageContainer{
+        text-align: left;
+      }
+
+  /*-----------------------------------*/ 
+
+
+
+  /*-----------How to Play Button Styling-------------*/ 
+  .BtnHowToPlay{
+      width: 350px;
+      height: 50px;
+      font-weight: bold;
+      margin-top: 20px;
+      font-size: 20px;
+    
+    }
+  /*-----------------------------------*/
+
+  
+/*-----------Style the image at the bottom-------------*/ 
+  .BottomImage{
+      width: 100%;
+      max-height:70px ;
+    }
+/*-----------------------------------*/
