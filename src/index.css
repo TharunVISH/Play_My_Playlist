@@ -1,9 +1,7 @@
 body {
   margin: 0;
   align-content: center;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-  sans-serif;
+  font-family: 'Courier New', monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -11,4 +9,60 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+.CreatepageHead{
+  background-Image:url(./ImagesUsed/Music3.jpg);
+  background-position: left;
+}
+.head1 button{
+  position: absolute;
+  left: 85%;
+  font-size: 70%;
+  background-color: rgba(0, 119, 255, 0.945);
+  color: white;
+}
+.head1{
+  margin-left: 5%;
+}
+.Block-1{
+     margin-top: 10%;
+     width: 60%;
+     margin-left: 10%;
+}
+.Block-2{
+  margin-top: 10%;
+  width: 60%;
+}
+.Block-3{
+  margin-top: 10%;
+  width: 60%;
+  margin-left: 10%;
+}
+.Block-4{
+margin-top: 10%;
+width: 60%;
+height: 4pc;
+}
+.Block-3 button{
+  position: absolute;
+  left: 35%;
+  bottom: 46%;
+  
+}
+.gen-code{
+  width: 30%;
+  margin-top: 2%;
+  margin-left: 5%;
+  background-color: rgba(0, 119, 255, 0.945);
+  color: white;
+  font-size:120%;
+}
+.btn-bottom{
+  margin-top: 5%;
+  width: 20%;
+  height: 4pc;
+  margin-left: 37%;
+  background-color: rgba(0, 119, 255, 0.945);
+  color: white;
+  font-size: 200%;
 }
