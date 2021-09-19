@@ -2,14 +2,23 @@
     background-Image:url(../ImagesUsed/Music3.jpg);
     background-position: left;
   }
-  .head1 button{
-    position: absolute;
-    left: 85%;
-    font-size: 70%;
-    background-color: rgba(0, 119, 255, 0.945);
-    color: white;
+  .PageHeading{
+    margin-top: 10px;
+    margin-left: 10px;
+    display: inline-block;
+    font-size: 50px;
+    color: rgba(0, 119, 255, 0.945);
+    float: left;
   }
-  .head1{
+  .RoomID{
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: 10px;
+    float: right;
+
+  }
+  .PageHeading{
     margin-left: 5%;
   }
   .Block-1{
@@ -31,8 +40,8 @@
   width: 60%;
   height: 4pc;
   }
-  .Block-3 button{
-    position: absolute;
+  .Block-3 {
+
     left: 35%;
     bottom: 46%;
     
@@ -54,3 +63,9 @@
     color: white;
     font-size: 200%;
   }
+  .CopyPasscode .Passcode{
+    display: inline-flex;
+    
+  }
+
+  

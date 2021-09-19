@@ -12,8 +12,12 @@ import MusicImage from '../ImagesUsed/Music3.jpg';
 function Createpage() {
     return(
         <div className= "CreatepageHead">
-            <h1 className="head1">Create Room <button>Room ID:THYE  <FontAwesomeIcon icon={faCopy} /></button></h1>
-            
+            <div className="PageHeading">Create Room</div> 
+            <Button className="RoomID" variant="primary">Room ID:THYE  <FontAwesomeIcon icon={faCopy} /></Button>
+            <br/><br/><br/><br/>
+
+
+          
   <Form>
   <Row>
     <Col>
@@ -36,8 +40,9 @@ function Createpage() {
     <Col>
     <Form.Group className="Block-3" >
     <Form.Label><h3>Passcode:</h3></Form.Label>
-    <Button><FontAwesomeIcon icon={faCopy} /></Button>
-      <Form.Control  type="password"/>
+    
+      <Form.Control className="Passcode"  type="password" disabled/>
+      <Button className="CopyPasscode"><FontAwesomeIcon icon={faCopy} /></Button>
       </Form.Group>
     </Col>
     <Col>
@@ -51,7 +56,7 @@ function Createpage() {
 <button className="gen-code">Generate code</button>
 <div className="bottom"><button className="btn-bottom">Create Room </button></div>
 
-        </div>
-    )
+</div>
+       )
 }
 export default Createpage;
