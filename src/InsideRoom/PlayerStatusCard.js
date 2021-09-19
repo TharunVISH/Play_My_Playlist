@@ -10,7 +10,7 @@ class PlayerStatusCard extends Component{
     <div className='PlayerCard'>
         
         <div className="PlayerImageContainer" >
-            <span class="notify-badge">NEW</span>
+            
             <Image className ="PlayerImage" src={'/PlayersImages/Player_Id_'+this.props.ID+'.jpg'}></Image>
 
         </div>
