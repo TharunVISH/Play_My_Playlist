@@ -1,0 +1,85 @@
+
+
+.PlayerCard{
+    display: inline-block;
+    margin-left: 20px;  
+}
+
+.PlayerImage{
+    border: 2px solid #03bfcb;
+   border-radius: 50%;
+   height: 60px;
+   width: 60px;
+   object-fit: cover;
+    
+}
+.PlayersInfo{
+    font-size: 10px;
+}
+.OnlineStatus{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: lime;
+}
+
+
+.LogedInPlayerInfoContainer{
+    display: inline-block;
+    margin-left: 5%;
+    margin-top: 10px;
+   
+}
+.LogedInPlayerImageContainer{
+    display: block;
+    
+}
+.notify-badge{
+    position: absolute;
+    right:-20px;
+    top:10px;
+    background:red;
+    text-align: center;
+    border-radius: 30px 30px 30px 30px;
+    color:white;
+    padding:5px 10px;
+    font-size:20px;
+}
+
+.LogedInPlayerImage{
+    border: 2px solid #03bfcb;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    object-fit: cover;
+    display: inline;
+    
+
+}
+.LogedInPlayerName{
+    font-size: 25px;
+    font-weight: bold;
+    display: inline;
+    color: #475ee6;
+}
+.ButtonHowToPlay{
+    float: right;
+    margin-right: 5%;
+    width: 200px;
+    margin-top: 10px;
+ 
+}
+.WaitingLobby{
+    background-color: #ffd9d8;
+    width: 90%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    display: block;
+}
+.WaitingLobbyHead{
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+}
