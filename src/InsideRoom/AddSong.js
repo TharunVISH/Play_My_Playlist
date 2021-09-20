@@ -17,11 +17,11 @@ import Musicbutton from '../ImagesUsed/musicbutton.jpg';
              </p>
              <br/>
              <Form>
-                 <Row>
-                     <Col>
+                 <Row >
+                     <Col >
                      <Form.Group className="inputbox">
-                     <InputGroup>
-                     <Form.Control  type="Text"  placeholder="paste link here"  />
+                     <InputGroup >
+                     <Form.Control   type="Text"  placeholder="paste link here"  />
                      <InputGroup.Text>
                        <button className="upbutton" >
                            <img className="upimag"src= {Uploadbutton} alt=""/>

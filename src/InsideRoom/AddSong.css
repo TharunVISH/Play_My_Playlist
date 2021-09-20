@@ -19,14 +19,15 @@
 }
 .inputbox{
     margin-left: 20px;
-    width: 420px;
+    width: 100%;
+    
 }
 .musicdiv{
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
     background-color: white;
     margin-left: 20px;
-    width: 420px;
+    width: 95%;
    
 }
 .upbutton{
@@ -39,11 +40,14 @@
 }
 .musicbox{
     border-color:white;
-    width: 400px;
+    width: 100%;
     margin-left: 25px;
 }
 .addbutton{
     width: 80px;
+    float: left;
+    margin-left: 10%;
+    height: 43px;
 }
 .startgame{
     text-align: center;
@@ -53,4 +57,15 @@
     margin-right: auto;
 
     display: block;
+}
+.col1{
+    width: 90%;
+}
+.col2{
+    width: 10%;
+}
+
+.row{
+    width: 100%;
+    
 }

@@ -6,6 +6,7 @@ import Button from 'react-bootstrap/Button'
 
 import BottomImage from '../ImagesUsed/BottomGraphics.gif';
 import ArrowImage from '../ImagesUsed/Arrow.png';
+import { Link} from "react-router-dom";
 
 function HomePage() {
   return(
@@ -21,6 +22,7 @@ function HomePage() {
 
 
     {/*Create Room Button*/}
+    <Link to="/createpage">
     <Button className="BtnCreateJoinRoom"variant="primary">
       <h2 className="BtnHead">Create Room</h2>
       <br/><br/>
@@ -28,8 +30,10 @@ function HomePage() {
       <br/><br/>
       <div className="ArrowImageContainer"><img  className="ArrowImage" src={ArrowImage} alt="ArrowImage" /></div>
     </Button>
+    </Link>
 
     {/*Join Room Button*/}
+    <Link to="/insideroom">
     <Button className="BtnCreateJoinRoom"variant="primary">
       <h2 className="BtnHead">Join Room</h2>
       <br/><br/>
@@ -37,6 +41,7 @@ function HomePage() {
       <br/><br/> 
       <div className="ArrowImageContainer"><img  className="ArrowImage" src={ArrowImage} alt="ArrowImage" /></div>
     </Button>
+    </Link>
     
     {/*Button How To Play */}
     <div>

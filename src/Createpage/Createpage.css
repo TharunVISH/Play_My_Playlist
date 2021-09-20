@@ -1,6 +1,14 @@
 .CreatepageHead{
     background-Image:url(../ImagesUsed/Music3.jpg);
-    background-position: left;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top:0px;
+    left:0px;
+    width: 100%;
+    height: 100%;
   }
   .PageHeading{
     margin-top: 10px;
@@ -39,6 +47,7 @@
   margin-top: 10%;
   width: 60%;
   height: 4pc;
+  
   }
   .Block-3 {
 
@@ -63,9 +72,16 @@
     color: white;
     font-size: 200%;
   }
-  .CopyPasscode .Passcode{
-    display: inline-flex;
-    
-  }
+ .CopyPasscode{
+height: 35px;
+ }
+ .GameRules{
+  height: 150px;
+ }
+ .ComponentsCommonStyles{
+  
+   height: 45px;
+ }
+
 
   
