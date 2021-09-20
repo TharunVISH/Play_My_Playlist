@@ -1,5 +1,5 @@
 import React,{Component} from "react";
-import {Card,Image} from 'react-bootstrap'
+import {Image} from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css' 
 import './PlayerStatus.css'
 

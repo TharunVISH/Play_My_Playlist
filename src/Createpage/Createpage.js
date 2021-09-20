@@ -6,7 +6,7 @@ import Row from 'react-bootstrap/Row'
 import Button from 'react-bootstrap/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCopy } from '@fortawesome/fontawesome-free-solid'
-import MusicImage from '../ImagesUsed/Music3.jpg';
+//import MusicImage from '../ImagesUsed/Music3.jpg';
 
 
 function Createpage() {

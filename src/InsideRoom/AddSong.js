@@ -1,11 +1,11 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Form, Row,Col, InputGroup } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
-import {FontAwesome,FontAwesomeIcon} from 'react-fontawesome';
+//import {FontAwesome,FontAwesomeIcon} from 'react-fontawesome';
 import './AddSong.css';
-import Uploadbutton from './ImagesUsed/uploadimage.png';
-import Playbutton from './ImagesUsed/playbutton.jpg';
-import Musicbutton from './ImagesUsed/musicbutton.jpg';
+import Uploadbutton from '../ImagesUsed/uploadimage.png';
+import Playbutton from '../ImagesUsed/playbutton.jpg';
+import Musicbutton from '../ImagesUsed/musicbutton.jpg';
 
 
 
@@ -24,7 +24,7 @@ import Musicbutton from './ImagesUsed/musicbutton.jpg';
                      <Form.Control  type="Text"  placeholder="paste link here"  />
                      <InputGroup.Text>
                        <button className="upbutton" >
-                           <img className="upimag"src= {Uploadbutton}/>
+                           <img className="upimag"src= {Uploadbutton} alt=""/>
                        </button>
                      </InputGroup.Text>
                      </InputGroup>
@@ -43,13 +43,13 @@ import Musicbutton from './ImagesUsed/musicbutton.jpg';
                      <Form.Group className="musicbox">
                      <InputGroup>
                      <InputGroup.Text>
-                       <img className="upimag"src= {Musicbutton}/>
+                       <img className="upimag"src= {Musicbutton} alt=""/>
                      </InputGroup.Text>
                      <Form.Control  type="Text"   placeholder="song title - fetched from link"  >
                      </Form.Control>
                      <InputGroup.Text>
                        <button className="upbutton">
-                           <img className="upimag"src= {Playbutton}/>
+                           <img className="upimag"src= {Playbutton} alt=""/>
                        </button>
                      </InputGroup.Text>
                      </InputGroup>
