@@ -7,7 +7,7 @@ import HomePage from './HomePage/HomePage'
 import {  BrowserRouter as Router,  Switch,  Route} from "react-router-dom";
 import Frame from './HeaderAndFrame/Frame'
 
-window.CurrentPage='';
+
 
 function App() {
   return(
