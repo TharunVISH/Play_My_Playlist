@@ -1,5 +1,6 @@
 
 import './HomePage.css'
+import PmplLogo from '../ImagesUsed/PMPL-LOGO.png'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button'
@@ -15,15 +16,15 @@ function HomePage() {
 
     {/*Home Page Heading*/}
     <div className= "HomePageHead">
-      <h1 className="HomePageHead1">Play My Playlist</h1>
+      <img className='HomePageHead1' src={PmplLogo} alt=''/>
       <div className="UnderLine"/>
       <h2 className="HomePageHead2">A Multiplayer Social Game To Play Along With Your Friends In A Private Room</h2>
     </div>
 
 
     {/*Create Room Button*/}
-    <Link to="/createpage">
-    <Button className="BtnCreateJoinRoom"variant="primary">
+    <Link to='/Frame/CreatePage' >
+    <Button className="BtnCreateJoinRoom"variant="primary"   >
       <h2 className="BtnHead">Create Room</h2>
       <br/><br/>
       <p className="BtnCaption">Play along with your friends</p>
@@ -33,7 +34,7 @@ function HomePage() {
     </Link>
 
     {/*Join Room Button*/}
-    <Link to="/insideroom">
+    <Link to="/Frame/InsideRoom">
     <Button className="BtnCreateJoinRoom"variant="primary">
       <h2 className="BtnHead">Join Room</h2>
       <br/><br/>
@@ -60,5 +61,9 @@ function HomePage() {
 
   );
 }
+
+
+
+
 
 export default HomePage;

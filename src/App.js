@@ -3,26 +3,27 @@ import './App.css';
 
 import HomePage from './HomePage/HomePage'
 
-import Createpage from './Createpage/Createpage';
-import InsideRoom from './InsideRoom/InsideRoom'
+
 import {  BrowserRouter as Router,  Switch,  Route} from "react-router-dom";
+import Frame from './HeaderAndFrame/Frame'
 
-
+window.CurrentPage='';
 
 function App() {
-  return(<Router>
+  return(
+  <Router>
     <Switch>
-    <div>
-    
-    <Route path='/' exact component={HomePage}/>
-    <Route path='/createpage'  component={Createpage}/>
-    <Route path='/insideroom'  component={InsideRoom}/>
+      <div>
+      
+      <Route path='/' exact component={HomePage}/>
+      <Route path='/Frame'  >
+      <Frame/>
+      </Route>
 
+    </div>
 
-
-  </div>
-
-      </Switch></Router>
+    </Switch>
+  </Router>
     
     
   );

@@ -4,25 +4,38 @@
     display: inline-block;
     margin-left: 20px;  
 }
-
+.PlayerImageContainer{
+    position: relative;
+    top: 0;
+    left: 0;
+}
 .PlayerImage{
+    position: relative;
+    top: 0;
+    left: 0;
     border: 2px solid #03bfcb;
-   border-radius: 50%;
-   height: 60px;
-   width: 60px;
-   object-fit: cover;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    object-fit: cover;
+   
     
 }
+
+.OnlineStatusIndicator{
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    object-fit: cover;
+   
+}
+
 .PlayersInfo{
     font-size: 10px;
 }
-.OnlineStatus{
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: lime;
-}
-
 
 .LogedInPlayerInfoContainer{
     display: inline-block;
@@ -32,6 +45,7 @@
 }
 .LogedInPlayerImageContainer{
     display: block;
+    
     
 }
 

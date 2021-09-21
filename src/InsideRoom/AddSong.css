@@ -58,14 +58,19 @@
 
     display: block;
 }
-.col1{
-    width: 90%;
-}
-.col2{
-    width: 10%;
-}
+
 
 .row{
     width: 100%;
     
+}
+.MusicSymbolContainer {
+    border-radius: 50%;
+    margin-right: -5px;
+}
+.MusicSymbol{
+    border-radius: 50%;
+    width: 40px;
+    
+ 
 }

@@ -11,14 +11,14 @@ function PlayersStatus(){
         {
           Name:'Player 1',
           ID:'0001',
-          NoOfSongs:5,
+          NoOfSongs:10,
           IsOnline:true
     
         },
         {
           Name:'Player 2',
           ID:'0002',
-          NoOfSongs:5,
+          NoOfSongs:8,
           IsOnline:true
     
         },
@@ -26,13 +26,13 @@ function PlayersStatus(){
           Name:'Player 3',
           ID:'0003',
           NoOfSongs:5,
-          IsOnline:true
+          IsOnline:false
     
         },
         {
           Name:'Player 4',
           ID:'0004',
-          NoOfSongs:5,
+          NoOfSongs:4,
           IsOnline:true
     
         }
