@@ -20,8 +20,8 @@ import MusicSymbol from '../ImagesUsed/MusicSymbol.gif';
                 <Form>
                     <Row >
                         <Col >
-                            <Form.Group className="inputbox">
-                                <InputGroup >
+                            <Form.Group>
+                                <InputGroup  className="inputbox" >
                                 <Form.Control   type="Text"  placeholder="paste link here"  />
                                 <InputGroup.Text>
                                     <button className="upbutton" >
@@ -38,8 +38,8 @@ import MusicSymbol from '../ImagesUsed/MusicSymbol.gif';
                     <br/>
                     <Row>
                         <Col>
-                            <Form.Group className="musicbox">
-                                <InputGroup>
+                            <Form.Group >
+                                <InputGroup className="musicbox">
                                     <InputGroup.Text className="MusicSymbolContainer">
                                         <img className="MusicSymbol"src= {MusicSymbol} alt=""/>
                                     </InputGroup.Text>

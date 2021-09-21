@@ -20,6 +20,7 @@
 .inputbox{
     margin-left: 20px;
     width: 100%;
+    height: 52px;
     
 }
 .musicdiv{
@@ -42,12 +43,13 @@
     border-color:white;
     width: 100%;
     margin-left: 25px;
+
 }
 .addbutton{
     width: 80px;
     float: left;
     margin-left: 10%;
-    height: 43px;
+    height: 52px;
 }
 .startgame{
     text-align: center;
