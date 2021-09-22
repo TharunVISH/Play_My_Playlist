@@ -4,7 +4,7 @@ import './App.css';
 import HomePage from './HomePage/HomePage'
 
 
-import {  BrowserRouter as Router,  Switch,  Route} from "react-router-dom";
+import {  BrowserRouter as Router,  Switch,  Route, Redirect} from "react-router-dom";
 import Frame from './HeaderAndFrame/Frame'
 
 
@@ -14,12 +14,11 @@ function App() {
   <Router>
     <Switch>
       <div>
-      
-      <Route path='/' exact component={HomePage}/>
-      <Route path='/Frame'  >
-      <Frame/>
-      </Route>
-
+        <Route exact path="/">
+          <Redirect to="/Home" exact />
+        </Route>
+        <Route path='/Home'  component={HomePage} />
+        <Route path='/Frame'  component={Frame}/>
     </div>
 
     </Switch>
