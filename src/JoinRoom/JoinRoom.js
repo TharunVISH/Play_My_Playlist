@@ -3,18 +3,20 @@ import Header from '../HeaderAndFrame/Header';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEye } from '@fortawesome/fontawesome-free-solid'
 import { Link} from "react-router-dom";
-import "./JoinRoom.css"
+
+import './JoinRoom.css'
+
 function JoinRoom() {
     return(
         <div className= "Createpage">
 
           <Header PageHeaderNav = 'Join Room'/>
-            <div className="PageHeading">Join Room</div> 
-            <Button className="RoomID" variant="primary">How To Play</Button>
+            <div ><h3 className="PageHeading">Join Room</h3>
+            <Button className="RoomID" variant="primary">How To Play</Button></div> 
             <br/><br/><br/><br/>
 
 
-          <div>
+          <div className="FormJoin">
 
 
                     <Form fluid ="sm" className='JoinRoomForm'>
@@ -24,10 +26,10 @@ function JoinRoom() {
                                 <Form.Label><h4>Room ID:</h4></Form.Label>
                                 <Row>
                                 <Col>
-                                <Form.Control type="text" placeholder="Enter Room ID" />
+                                <Form.Control className="JoinClassRoom" type="text" placeholder="Enter Room ID" />
                                 </Col>
                                 <Col>
-                                <Button >Check Server</Button>
+                                <Button className="JoinFormButton" >Check Server</Button>
                                 </Col>
                             </Row>
                             </Form.Group>
