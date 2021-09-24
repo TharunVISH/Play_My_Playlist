@@ -1,0 +1,12 @@
+.PageHeading{
+    font-size: 40px;
+    position: relative;
+}
+.FormJoin{
+    margin-left: 10px;
+}
+.btn-bottom{
+    width: 35%;
+    height: 20%;
+    font-size: medium;
+}
