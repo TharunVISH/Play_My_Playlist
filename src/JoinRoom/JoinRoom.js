@@ -3,6 +3,7 @@ import Header from '../HeaderAndFrame/Header';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEye } from '@fortawesome/fontawesome-free-solid'
 import { Link} from "react-router-dom";
+import "./JoinRoom.css"
 function JoinRoom() {
     return(
         <div className= "Createpage">
@@ -16,11 +17,11 @@ function JoinRoom() {
           <div>
 
 
-                    <Form fluid ="sm">
+                    <Form fluid ="sm" className='JoinRoomForm'>
                         <Row >
                             <Col>
                             <Form.Group  >
-                                <Form.Label>Room ID:</Form.Label>
+                                <Form.Label><h4>Room ID:</h4></Form.Label>
                                 <Row>
                                 <Col>
                                 <Form.Control type="text" placeholder="Enter Room ID" />
@@ -33,13 +34,14 @@ function JoinRoom() {
                             </Col>
                             
                         </Row>
+                        <br/>
                         <Row >
                             <Col>
                             <Form.Group  >
-                                <Form.Label>Room ID:</Form.Label>
+                                <Form.Label><h4>Password:</h4></Form.Label>
                                 <Row>
                                 <Col>
-                                <Form.Control type="password" placeholder="Enter Room ID" />
+                                <Form.Control type="password" placeholder="Enter Password" />
                                 </Col>
                                 <Col>
                                 <Button ><FontAwesomeIcon icon={faEye} /></Button>
