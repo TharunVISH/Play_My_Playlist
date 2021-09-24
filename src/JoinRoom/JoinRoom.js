@@ -8,7 +8,7 @@ function JoinRoom() {
         <div className= "Createpage">
 
           <Header PageHeaderNav = 'Join Room'/>
-            <div className="PageHeading">Create Room</div> 
+            <div className="PageHeading">Join Room</div> 
             <Button className="RoomID" variant="primary">How To Play</Button>
             <br/><br/><br/><br/>
 
@@ -54,7 +54,7 @@ function JoinRoom() {
                     <br/><br/>
                     </div>       
 
-                    <div className="bottom"><Link to="/Frame/InsideRoom"><Button className="btn-bottom">Create Room </Button></Link></div>
+                    <div className="bottom"><Link to="/Frame/InsideRoom"><Button className="btn-bottom">Join Room </Button></Link></div>
 
         </div>
                    
