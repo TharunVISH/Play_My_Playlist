@@ -13,8 +13,9 @@ import Header from '../HeaderAndFrame/Header'
 
 function Createpage() {
     return(
+      <div className="header">
+       <Header PageHeaderNav = 'Join Room'/>
         <div className= "Createpage">
-          <Header PageHeaderNav = 'Join Room'/>
             <div className="PageHeading">Create Room</div> 
             <Button className="RoomID" variant="primary">Room ID:THYE  <FontAwesomeIcon icon={faCopy} /></Button>
             <br/><br/><br/><br/>
@@ -63,10 +64,10 @@ function Createpage() {
               </Row>
             </Form>
             <br/><br/>
-          </div>       
-
-          <div className="bottom"><Link to="/Frame/InsideRoom"><Button className="btn-bottom">Create Room </Button></Link></div>
-
+            <Link to="/Frame/InsideRoom"><Button className="btn-bottom">Create Room </Button></Link>
+          </div>   
+ 
+        </div>
         </div>
        )
 }
