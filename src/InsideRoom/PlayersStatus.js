@@ -25,7 +25,7 @@ function PlayersStatus(){
         {
           Name:'Player 3',
           ID:'0003',
-          NoOfSongs:5,
+          NoOfSongs:0,
           IsOnline:false
     
         },
