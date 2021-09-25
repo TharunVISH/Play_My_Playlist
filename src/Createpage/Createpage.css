@@ -1,13 +1,19 @@
 .Createpage{
     background-Image:url(../ImagesUsed/Music3.jpg);
-
     background-repeat: no-repeat;
-    background-position: center;
+    background-position:center;
     background-size: cover;
-    position:absolute;
-
-    width: 100%;
-    height: 94%;
+    position:fixed; 
+    margin-top: 3%; 
+    margin-bottom: 8%;
+    width: 98%;
+    border-style: double;
+    min-width: 20%;
+    height:90%;
+    border: double;
+    box-shadow: unset;
+    margin-left: 15px;
+    margin-right: 20px;
   }
   .PageHeading{
     margin-top: 10px;
@@ -17,65 +23,64 @@
     float: left;
   }
   .RoomID{
-
     margin-top: 10px;
     margin-left: auto;
     margin-right: 10px;
     float: right;
-
   }
-  .PageHeading{
-    margin-left: 5%;
+
+  .PageHeading
+  {
+    margin-left: 5px;
   }
   .Block-1{
-       margin-top: 10%;
+       margin-top: 75px;
        width: 60%;
-       margin-left: 10%;
+       min-width: 30%;
+       margin-left: 80px;
   }
   .Block-2{
-    margin-top: 10%;
+    margin-top: 75px;
     width: 60%;
   }
   .Block-3{
-    margin-top: 10%;
+    margin-top: 75px;
     width: 60%;
-    margin-left: 10%;
+    min-width: 10%;
+    margin-left: 75px;
   }
   .Block-4{
-  margin-top: 10%;
+  margin-top: 75px;
   width: 60%;
+  min-width: 10%;
   height: 4pc;
   
   }
   .Block-3 {
 
-    left: 35%;
-    bottom: 46%;
+    left: 35px;
+    bottom: 46px;
     
   }
   .gen-code{
     width: 100%;
     margin-top: 10px;
-
     font-size:120%;
   }
   .btn-bottom{
-    margin-top: auto;
-    width: 400px;
+    width: 300px;
     height: 4pc;
-    margin-left: auto;
+    margin-left: 33%;
     font-size: 30px;
-  }
-  .bottom{
-text-align: center;
-margin-top: 50px;
+    text-align: center;
+    margin-top: 50px;
   }
 
  .GameRules{
   height: 150px;
  }
  .ComponentsCommonStyles{
-  
+
    height: 45px;
  }
 
