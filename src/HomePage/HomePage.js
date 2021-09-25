@@ -34,7 +34,7 @@ function HomePage() {
     </Link>
 
     {/*Join Room Button*/}
-    <Link to="/Frame/InsideRoom">
+    <Link to="/Frame/JoinRoom">
     <Button className="BtnCreateJoinRoom"variant="primary">
       <h2 className="BtnHead">Join Room</h2>
       <br/><br/>
