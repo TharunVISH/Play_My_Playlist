@@ -65,7 +65,7 @@ function Createpage() {
             <br/><br/>
           </div>       
 
-          <div className="bottom"><Link to="/Frame/InsideRoom"><Button className="btn-bottom">Create Room </Button></Link></div>
+          <div className="bottom"><Link to="/InsideRoom"><Button className="btn-bottom">Create Room </Button></Link></div>
 
         </div>
        )

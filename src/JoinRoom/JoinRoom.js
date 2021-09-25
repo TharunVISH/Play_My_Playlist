@@ -4,31 +4,37 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEye } from '@fortawesome/fontawesome-free-solid'
 import { Link} from "react-router-dom";
 
+
+
 import './JoinRoom.css'
 
 function JoinRoom() {
     return(
-        <div className= "Createpage">
+        <div >
 
           <Header PageHeaderNav = 'Join Room'/>
-            <div ><h3 className="PageHeading">Join Room</h3>
-            <Button className="RoomID" variant="primary">How To Play</Button></div> 
+          <div className=" FormFrame shadow-lg pt-5 pb-5  mb-10 mt-5 ">
+            
+            <div >
+                <h3 className="PageHeading">Join Room</h3>
+                <Button className="RoomID" variant="primary">How To Play</Button>
+            </div> 
             <br/><br/><br/><br/>
 
 
           <div className="FormJoin">
 
 
-                    <Form fluid ="sm" className='JoinRoomForm'>
+                    <Form fluid  >
                         <Row >
                             <Col>
                             <Form.Group  >
                                 <Form.Label><h4>Room ID:</h4></Form.Label>
                                 <Row>
-                                <Col>
+                                <Col md={6} className="pr-0">
                                 <Form.Control className="JoinClassRoom" type="text" placeholder="Enter Room ID" />
                                 </Col>
-                                <Col>
+                                <Col md={2} className="pl-0">
                                 <Button className="JoinFormButton" >Check Server</Button>
                                 </Col>
                             </Row>
@@ -58,7 +64,10 @@ function JoinRoom() {
                     <br/><br/>
                     </div>       
 
-                    <div className="bottom"><Link to="/Frame/InsideRoom"><Button className="btn-bottom">Join Room </Button></Link></div>
+                    <div className="bottom"><Link to="/InsideRoom"><Button className="btn-bottom">Join Room </Button></Link></div>
+                    
+
+                </div>
 
         </div>
                    

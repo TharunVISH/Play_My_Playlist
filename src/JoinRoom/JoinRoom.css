@@ -8,10 +8,17 @@
     position: relative;
 }
 .FormJoin{
-    margin-left: 10px;
+   
 }
 .btn-bottom{
     width: 35%;
     height: 20%;
     font-size: medium;
+}
+.PaddingLeft-0{
+    padding-left:0;
+}
+.PaddingRight-0{
+    padding-right:0;
+
 }
