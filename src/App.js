@@ -16,9 +16,8 @@ function App() {
       <div>
       
       <Route path='/' exact component={HomePage}/>
-      <Route path='/Frame'  >
-      <Frame/>
-      </Route>
+      <Route path='/Frame' component={Frame} />
+      
 
     </div>
 
