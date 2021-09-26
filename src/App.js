@@ -17,14 +17,6 @@ function App() {
   return(
   <Router>
     <Switch>
-<<<<<<< HEAD
-      <div>
-      
-      <Route path='/' exact component={HomePage}/>
-      <Route path='/Frame' component={Frame} />
-      
-
-=======
       <div >
         <Route exact path="/">
           <Redirect to="/Home"  />
@@ -33,7 +25,6 @@ function App() {
         <Route path='/CreatePage'   component={CreateRoom}/>
         <Route path='/InsideRoom'  component={InsideRoom}/>
         <Route path='/JoinRoom'  component={JoinRoom}/>
->>>>>>> e75c8e6b2511591309acc7d7809b3f3ee441910c
     </div>
 
     </Switch>
