@@ -1,5 +1,5 @@
 import PmplLogo from '../ImagesUsed/PMPL-LOGO.png'
-import './HeaderFrame.css'
+
 import { Link} from "react-router-dom";
 function Header(props){
   
