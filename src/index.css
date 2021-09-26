@@ -10,3 +10,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+@font-face {
+  font-family: 'Explora';
+  src: local('Explora'), url(./fonts/Explora-Regular.ttf) format('truetype');}
+@font-face {
+    font-family: 'GemunuLibre';
+    src: local('Medium'), url(./fonts/GemunuLibre-Medium.ttf) format('truetype');}

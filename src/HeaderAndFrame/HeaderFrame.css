@@ -3,21 +3,81 @@
     height: 50px;
     background-color: rgb(223, 223, 223);
 }
-
-.Logo{
-  
-    height: 100%;
-}
-.Frame{
-
-    background-color: rgb(187, 187, 187);
-    padding-bottom: 20px;
-
-
-}
 .NavigationLinkContainer{
     display: inline-block;
     float: right;
     padding-top: 10px;
     padding-right: 10px;
+}
+.Logo{
+  
+    height: 50px;
+}
+
+
+
+.FormFrame{
+
+    background-Image:url(../ImagesUsed/Music3.jpg);
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position:absolute;
+
+    width: 94%;
+    height: auto;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+.PageHeading{
+
+    margin-left: 10px;
+    font-size: 30px;
+    color: rgba(0, 119, 255, 0.945);
+    float: left;
+    margin-left: 10px;
+    font-size: 40px;
+    position: relative;
+  }
+  .PageHeadingButton{
+
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: 10px;
+    float: right;
+
+  }
+
+
+.InnerForm{
+    margin-left: 10px;
+}
+
+
+
+.btn-bottom{
+    width: 35%;
+    height: 40px;
+    font-size: medium;
+}
+.bottom{
+    text-align: center;
+    margin-top: 50px;
+      }
+.PaddingLeft-0{
+    padding-left:0;
+
+}
+.PaddingRight-0{
+    padding-right:0;
+    
+
+}
+.FormControl{
+    width: 100%;
+}
+.FormLabel{
+    font-size: 20px;
 }

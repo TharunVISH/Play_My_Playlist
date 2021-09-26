@@ -1,11 +1,15 @@
 
 import './App.css';
+import './HeaderAndFrame/HeaderFrame.css'
 
-import HomePage from './HomePage/HomePage'
+import HomePage from './HomePage/HomePage';
+import CreateRoom from './Createpage/CreateRoom';
+import InsideRoom from './InsideRoom/InsideRoom';
+import JoinRoom from './JoinRoom/JoinRoom';
 
 
 import {  BrowserRouter as Router,  Switch,  Route, Redirect} from "react-router-dom";
-import Frame from './HeaderAndFrame/Frame'
+
 
 
 
@@ -13,12 +17,14 @@ function App() {
   return(
   <Router>
     <Switch>
-      <div>
+      <div >
         <Route exact path="/">
           <Redirect to="/Home"  />
         </Route>
         <Route path='/Home'  component={HomePage} />
-        <Route path='/Frame'  component={Frame}/>
+        <Route path='/CreatePage'   component={CreateRoom}/>
+        <Route path='/InsideRoom'  component={InsideRoom}/>
+        <Route path='/JoinRoom'  component={JoinRoom}/>
     </div>
 
     </Switch>
