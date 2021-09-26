@@ -8,7 +8,6 @@ import Playbutton from '../ImagesUsed/playbutton.jpg';
 import MusicSymbol from '../ImagesUsed/MusicSymbol.gif';
 
 
-
  function AddSong(){
      return( 
      <div>
@@ -43,7 +42,7 @@ import MusicSymbol from '../ImagesUsed/MusicSymbol.gif';
                                     <InputGroup.Text className="MusicSymbolContainer">
                                         <img className="MusicSymbol"src= {MusicSymbol} alt=""/>
                                     </InputGroup.Text>
-                                    <Form.Control  className="MusicSymbolContainer" type="Text"   placeholder="song title - fetched from link" />
+                                    <Form.Control  className="SongTitle" type="Text"   placeholder="song title - fetched from link" disabled/>
                                     
                                     <InputGroup.Text>
                                         <button className="upbutton">
@@ -63,12 +62,8 @@ import MusicSymbol from '../ImagesUsed/MusicSymbol.gif';
                 </Form>
             <br/>
             </div>
-            <Button className="startgame" variant="warning">
-                START GAME
-            </Button>
-             
-
-        </div>
+           <Button className="startgame" variant="warning">START GAME</Button>
+            </div>
      )
  }
  export default AddSong;
