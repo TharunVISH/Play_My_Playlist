@@ -25,7 +25,7 @@ function CreateRoom() {
     characterList= characterList + numbers
     characterList= characterList + specialcharacter
 
-    setPassword(createPassword(characterList))
+   setPassword(createPassword(characterList))
 }
 const createPassword = (characterList) => {
   let password=''
