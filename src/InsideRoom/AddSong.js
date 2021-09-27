@@ -18,7 +18,7 @@ import MusicSymbol from '../ImagesUsed/MusicSymbol.gif';
                 <br/>
                 <Form>
                     <Row >
-                        <Col  lg={9} md={9} sm={8} xs={7} className="PaddingRight-0">
+                        <Col  lg={10} md={10} sm={9} xs={8} className="PaddingRight-0">
                             <Form.Group>
                                 <InputGroup  className="inputbox" >
                                 <Form.Control   type="Text"  placeholder="paste link here"  />
@@ -30,13 +30,13 @@ import MusicSymbol from '../ImagesUsed/MusicSymbol.gif';
                                 </InputGroup>
                             </Form.Group>
                         </Col>
-                        <Col md='auto' lg={3} md={3} sm={4} xs={5} >
+                        <Col md='auto' lg={2} md={2} sm={3} xs={4} >
                             <Button className="addbutton" variant="light">Add</Button>
                         </Col>
                     </Row>
                     <br/>
                     <Row>
-                        <Col lg={9} md={9} sm={8} xs={7} className="PaddingRight-0">
+                        <Col lg={10} md={10} sm={9} xs={8} className="PaddingRight-0">
                             <Form.Group  >
                                 <InputGroup className="musicbox">
                                     <InputGroup.Text className="MusicSymbolContainer">
@@ -53,7 +53,7 @@ import MusicSymbol from '../ImagesUsed/MusicSymbol.gif';
                             </Form.Group>
                         </Col>
 
-                        <Col md='auto' lg={3} md={3} sm={4} xs={5} >
+                        <Col md='auto' lg={2} md={2} sm={3} xs={4} >
                         <Button className="addbutton" variant="light">
                             Remove
                         </Button>
