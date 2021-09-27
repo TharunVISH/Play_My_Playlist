@@ -11,10 +11,46 @@ import { faCopy } from '@fortawesome/fontawesome-free-solid'
 import { Link} from "react-router-dom";
 
 import Header from '../HeaderAndFrame/Header'
+import {numbers,uppercaselettters,lowercaseletters,specialcharacter} from './character'
+import { useState } from 'react';
 
 
 
 function CreateRoom() {
+  const[password,setPassword]=useState('')
+  const genpasscode= (e) =>{
+    let characterList =''
+    characterList= characterList + lowercaseletters
+    characterList= characterList + uppercaselettters
+    characterList= characterList + numbers
+    characterList= characterList + specialcharacter
+
+   setPassword(createPassword(characterList))
+}
+const createPassword = (characterList) => {
+  let password=''
+  let passwordLength=9
+  const characterListLength= characterList.length
+  for(let i=0;i<passwordLength;i++){
+  const characterIndex =Math.round(Math.random()*characterListLength)
+  password= password + characterList.charAt(characterIndex)
+} 
+return password
+}
+
+const copyToClipboard = () => {
+  const newTextArea = document.createElement('textarea')
+  newTextArea.innerText = password
+  document.body.appendChild(newTextArea)
+  newTextArea.select()
+  document.execCommand('copy')
+  newTextArea.remove()
+}
+const handleCopyPassword= (e) => {
+  copyToClipboard()
+}
+
+
     return(
         <div>
 
@@ -52,14 +88,14 @@ function CreateRoom() {
 
                     <Row>
                         <Col lg={10} md={9} sm={9} xs={10}  className="PaddingRight-0">
-                          <Form.Control className="FormControl"  type="password" disabled/>
+                          <Form.Control className="FormControl"  type="password" placeholder={password} disabled />
                         </Col>
                         <Col lg={2} md={3} sm={3} xs={2} className="PaddingLeft-0">
-                          <Button  className="FormControl"><FontAwesomeIcon icon={faCopy} /></Button>          
+                          <Button  className="FormControl"onClick={handleCopyPassword}><FontAwesomeIcon icon={faCopy}/></Button>          
                         </Col>
                     </Row>             
                                               
-                      <Button className="mt-2 FormControl">Generate code</Button>
+                      <Button className="mt-2 FormControl" onClick={genpasscode}>Generate code </Button>
                     </Form.Group>
                 </Col>
 
