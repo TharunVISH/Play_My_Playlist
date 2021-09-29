@@ -3,7 +3,7 @@ import '../HeaderAndFrame/HeaderFrame.css'
 import './CreateRoom.css'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Form, Row,Col, InputGroup,Button } from 'react-bootstrap';
+import { Form, Row,Col,Button } from 'react-bootstrap';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCopy } from '@fortawesome/fontawesome-free-solid'
@@ -11,32 +11,15 @@ import { faCopy } from '@fortawesome/fontawesome-free-solid'
 import { Link} from "react-router-dom";
 
 import Header from '../HeaderAndFrame/Header'
-import {numbers,uppercaselettters,lowercaseletters,specialcharacter} from './character'
-import { useState } from 'react';
 
+import { useState } from 'react';
+import {createPassword,copyToClipboard} from './CreateRoomFunctions';
 
 
 function CreateRoom() {
   const[password,setPassword]=useState('')
-  const genpasscode= (e) =>{
-    let characterList =''
-    characterList= characterList + lowercaseletters
-    characterList= characterList + uppercaselettters
-    characterList= characterList + numbers
-    characterList= characterList + specialcharacter
+  const[Participants,setParticipants]=useState(6)
 
-   setPassword(createPassword(characterList))
-}
-const createPassword = (characterList) => {
-  let password=''
-  let passwordLength=9
-  const characterListLength= characterList.length
-  for(let i=0;i<passwordLength;i++){
-  const characterIndex =Math.round(Math.random()*characterListLength)
-  password= password + characterList.charAt(characterIndex)
-} 
-return password
-}
 
 const copyToClipboard = () => {
   const newTextArea = document.createElement('textarea')
@@ -46,9 +29,7 @@ const copyToClipboard = () => {
   document.execCommand('copy')
   newTextArea.remove()
 }
-const handleCopyPassword= (e) => {
-  copyToClipboard()
-}
+
 
 
     return(
@@ -75,8 +56,9 @@ const handleCopyPassword= (e) => {
                 </Col>
                 <Col sm={6} xs={12}>
                 <Form.Group >
-                <Form.Label className="FormLabel">Number of Participants:</Form.Label>
-                  <Form.Control className="FormControl" type="number" />
+                <Form.Label className="FormLabel">Number of Participants:  <b>{Participants}</b></Form.Label>
+                <Form.Range  className=" FormControl" id="Participants"  min={2} max={10} onChange={()=>setParticipants(document.getElementById('Participants').value)} />
+                
                   </Form.Group>
                 </Col>
               </Row>
@@ -85,17 +67,15 @@ const handleCopyPassword= (e) => {
               <Col sm={6} xs={12}>
                   <Form.Group >
                     <Form.Label className="FormLabel">Passcode:</Form.Label>
-
                     <Row>
                         <Col lg={10} md={9} sm={9} xs={10}  className="PaddingRight-0">
                           <Form.Control className="FormControl"  type="password" placeholder={password} disabled />
                         </Col>
-                        <Col lg={2} md={3} sm={3} xs={2} className="PaddingLeft-0">
-                          <Button  className="FormControl"onClick={handleCopyPassword}><FontAwesomeIcon icon={faCopy}/></Button>          
+                        <Col lg={2} md={3} sm={3} xs={2} className="PaddingLeft-0 PaddingRight-0">
+                          <Button  className="FormControl" onClick={()=>copyToClipboard(password)}><FontAwesomeIcon icon={faCopy}/></Button>          
                         </Col>
-                    </Row>             
-                                              
-                      <Button className="mt-2 FormControl" onClick={genpasscode}>Generate code </Button>
+                    </Row>         
+                      <Button className="mt-2  FormControl btn btn-primary" onClick={()=>setPassword(createPassword())}>Generate code </Button>
                     </Form.Group>
                 </Col>
 
@@ -110,9 +90,12 @@ const handleCopyPassword= (e) => {
          
           </div>       
 
-          <div className="bottom"><Link to="/InsideRoom"><Button className="btn-bottom">Join Room </Button></Link></div>
+          <div className="bottom"><Link to="/InsideRoom"><Button className="btn-bottom">Create Room </Button></Link></div>
 
           </div></div>
        )
 }
+
+
+
 export default CreateRoom;
