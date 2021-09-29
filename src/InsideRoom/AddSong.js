@@ -30,7 +30,7 @@ import MusicSymbol from '../ImagesUsed/MusicSymbol.gif';
                                 </InputGroup>
                             </Form.Group>
                         </Col>
-                        <Col md='auto' lg={3} md={3} sm={4} xs={5} >
+                        <Col  lg={3} md={3} sm={4} xs={5} >
                             <Button className="addbutton" variant="light">Add</Button>
                         </Col>
                     </Row>
@@ -53,7 +53,7 @@ import MusicSymbol from '../ImagesUsed/MusicSymbol.gif';
                             </Form.Group>
                         </Col>
 
-                        <Col md='auto' lg={3} md={3} sm={4} xs={5} >
+                        <Col lg={3} md={3} sm={4} xs={5} >
                         <Button className="addbutton" variant="light">
                             Remove
                         </Button>
