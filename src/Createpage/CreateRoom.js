@@ -21,14 +21,7 @@ function CreateRoom() {
   const[Participants,setParticipants]=useState(6)
 
 
-const copyToClipboard = () => {
-  const newTextArea = document.createElement('textarea')
-  newTextArea.innerText = password
-  document.body.appendChild(newTextArea)
-  newTextArea.select()
-  document.execCommand('copy')
-  newTextArea.remove()
-}
+
 
 
 
