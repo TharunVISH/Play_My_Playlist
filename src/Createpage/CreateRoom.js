@@ -12,17 +12,35 @@ import { Link} from "react-router-dom";
 
 import Header from '../HeaderAndFrame/Header'
 
-import { useState } from 'react';
+import React, { useState, useEffect } from "react";
+
 import {createPassword,copyToClipboard} from './CreateRoomFunctions';
 
 
+
 function CreateRoom() {
+
   const[password,setPassword]=useState('')
   const[Participants,setParticipants]=useState(6)
 
+const Api_Url = "http://localhost:4000/api/GenerateID"
+// console.log("hello")
+  
+  
+  const [RoomId, setRoomID] = useState(null);
 
+  
+  useEffect(() => {
 
+    fetch(Api_Url)
+      .then((res) => res.json())
+      .then((data) => {
+        setRoomID(data.Id);
+        
+        // console.log(data);
 
+      });
+  }, []);
 
 
     return(
@@ -33,7 +51,7 @@ function CreateRoom() {
             
             <div >
             <div className="PageHeading">Create Room</div> 
-            <Button className="PageHeadingButton" variant="primary">Room ID:THYE  <FontAwesomeIcon icon={faCopy} /></Button>
+            <Button className="PageHeadingButton" variant="primary">Room ID:{RoomId}  <FontAwesomeIcon icon={faCopy} /></Button>
             </div>
             <br/><br/><br/><br/>
 
@@ -43,7 +61,7 @@ function CreateRoom() {
               <Row>          
                 <Col sm={6} xs={12}>
                   <Form.Group >
-                    <Form.Label className="FormLabel">Room Name:</Form.Label>
+                    <Form.Label className="FormLabel">Room Name:{}</Form.Label>
                     <Form.Control className="FormControl" type="Text"  />
                   </Form.Group>
                 </Col>
