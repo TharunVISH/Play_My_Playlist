@@ -1,12 +1,16 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Button} from 'react-bootstrap';
+
 
 import PlayerStatusCard from'./PlayerStatusCard';
 import DisplayLogedInPlayer from './LogedInProfileDisplay'
 import './PlayerStatus.css'
+import ButtonHowToPlay from'./HowToPlayButton';
+
 
 
 function PlayersStatus(){
+
+
     let PlayerInfo=[
         {
           Name:'Player 1',
@@ -41,7 +45,7 @@ function PlayersStatus(){
       <div>
         <div>
           <DisplayLogedInPlayer ID='0001' Name='Player 1'></DisplayLogedInPlayer>
-          <Button className="ButtonHowToPlay" variant="primary" >HOW TO PLAY  </Button>
+          <ButtonHowToPlay/>
         </div>
         <div className='WaitingLobby'>
           <div  className='WaitingLobbyHead'>Waiting Lobby</div>

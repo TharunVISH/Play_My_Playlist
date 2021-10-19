@@ -23,10 +23,13 @@ function CreateRoom() {
   const[password,setPassword]=useState('')
   const[Participants,setParticipants]=useState(6)
 
+ 
+
 const Api_Url = "http://localhost:4000/api/GenerateID"
+
 // console.log("hello")
   
-  
+
   const [RoomId, setRoomID] = useState(null);
 
   
@@ -51,7 +54,7 @@ const Api_Url = "http://localhost:4000/api/GenerateID"
             
             <div >
             <div className="PageHeading">Create Room</div> 
-            <Button className="PageHeadingButton" variant="primary">Room ID:{RoomId}  <FontAwesomeIcon icon={faCopy} /></Button>
+            <Button className="PageHeadingButton" id="RoomID" value={RoomId} variant="primary" >Room ID:{RoomId}  <FontAwesomeIcon icon={faCopy} /></Button>
             </div>
             <br/><br/><br/><br/>
 
@@ -61,14 +64,14 @@ const Api_Url = "http://localhost:4000/api/GenerateID"
               <Row>          
                 <Col sm={6} xs={12}>
                   <Form.Group >
-                    <Form.Label className="FormLabel">Room Name:{}</Form.Label>
-                    <Form.Control className="FormControl" type="Text"  />
+                    <Form.Label className="FormLabel">Room Name:</Form.Label>
+                    <Form.Control className="FormControl" type="Text" id="RoomName" />
                   </Form.Group>
                 </Col>
                 <Col sm={6} xs={12}>
                 <Form.Group >
                 <Form.Label className="FormLabel">Number of Participants:  <b>{Participants}</b></Form.Label>
-                <Form.Range  className=" FormControl" id="Participants"  min={2} max={10} onChange={()=>setParticipants(document.getElementById('Participants').value)} />
+                <Form.Range name="ParticipentNo" className=" FormControl" id="Participants"  min={2} max={10} onChange={()=>setParticipants(document.getElementById('Participants').value)} />
                 
                   </Form.Group>
                 </Col>
@@ -80,7 +83,7 @@ const Api_Url = "http://localhost:4000/api/GenerateID"
                     <Form.Label className="FormLabel">Passcode:</Form.Label>
                     <Row>
                         <Col lg={10} md={9} sm={9} xs={10}  className="PaddingRight-0">
-                          <Form.Control className="FormControl"  type="password" placeholder={password} disabled />
+                          <Form.Control id="Passcode" className="FormControl"  type="text"  value={password} disabled />
                         </Col>
                         <Col lg={2} md={3} sm={3} xs={2} className="PaddingLeft-0 PaddingRight-0">
                           <Button  className="FormControl" onClick={()=>copyToClipboard(password)}><FontAwesomeIcon icon={faCopy}/></Button>          
@@ -93,20 +96,37 @@ const Api_Url = "http://localhost:4000/api/GenerateID"
                 <Col sm={6} xs={12}>
                   <Form.Group >
                   <Form.Label className="FormLabel">Game Rules:</Form.Label>
-                    <Form.Control as="textarea" className="FormControl GameRules"/>
+                    <Form.Control as="textarea" id="GameRule" className="FormControl GameRules"/>
                     </Form.Group>
                 </Col>
               </Row>
+              <div className="bottom" onClick={SendData}><Link to={'/InsideRoom?RoomID='+RoomId}><Button className="btn-bottom" >Create Room </Button></Link></div>
             </Form>
          
           </div>       
 
-          <div className="bottom"><Link to="/InsideRoom"><Button className="btn-bottom">Create Room </Button></Link></div>
-
+          
           </div></div>
        )
 }
 
-
+function SendData(){
+  
+  var DataObj={RoomID:document.getElementById('RoomID').value,
+    RoomName:document.getElementById('RoomName').value,
+    ParticipentNo:document.getElementById('Participants').value,
+    Passcode:document.getElementById('Passcode').value,
+    GameRule:document.getElementById('GameRule').value}
+  
+    
+  const requestOptions = {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(DataObj),
+    mode: 'cors'
+    
+};
+fetch("http://localhost:5000/api/ReceiveRoomData", requestOptions)
+}
 
 export default CreateRoom;
