@@ -1,14 +1,31 @@
-import { Form, Row,Col, InputGroup,Container,Button } from 'react-bootstrap';
+import { Form, Row,Col, Button } from 'react-bootstrap';
 import Header from '../HeaderAndFrame/Header';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEye } from '@fortawesome/fontawesome-free-solid'
+import { faEye,faEyeSlash } from '@fortawesome/fontawesome-free-solid'
 import { Link} from "react-router-dom";
-
+import { useState } from 'react';
 
 
 
 
 function JoinRoom() {
+    const[PasscodeFieldType,setPasscodeFieldType]=useState('password')
+    const[ShowPasscodeButtonIcon,setShowPasscodeButtonIcon]=useState(faEye)
+
+
+
+    const TogglePasscodeVisibility = () => {
+        
+        if (PasscodeFieldType === "password") {
+            setPasscodeFieldType("text");
+            setShowPasscodeButtonIcon(faEyeSlash);
+        } else {
+            setPasscodeFieldType("password");
+            setShowPasscodeButtonIcon(faEye);
+        }
+    }
+
+
     return(
         <div >
 
@@ -46,13 +63,13 @@ function JoinRoom() {
                         <Row >
                             <Col>
                             <Form.Group  >
-                                <Form.Label className="FormLabel">Password:</Form.Label>
+                                <Form.Label className="FormLabel">Passcode:</Form.Label>
                                 <Row>
                                     <Col md={7} sm={10} xs={10} className="PaddingRight-0">
-                                        <Form.Control className="FormControl" type="password" placeholder="Enter Password" />
+                                        <Form.Control className="FormControl" type={PasscodeFieldType} placeholder="Enter Password" />
                                     </Col>
                                     <Col md={1} sm={2} xs={2} className="PaddingLeft-0">
-                                        <Button className="FormControl"><FontAwesomeIcon icon={faEye} /></Button>
+                                        <Button className="FormControl"><FontAwesomeIcon icon={ShowPasscodeButtonIcon} onClick={TogglePasscodeVisibility} /></Button>
                                     </Col>
                                 </Row>
                             </Form.Group>
@@ -73,8 +90,9 @@ function JoinRoom() {
                    
           
 
-
-
     )
 }
+
+
+
 export default JoinRoom
