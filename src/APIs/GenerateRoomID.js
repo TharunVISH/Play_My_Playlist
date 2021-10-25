@@ -35,7 +35,7 @@ app.listen(port,()=>{console.log(`Listening to port ${port}`)})
 
 function SelectRoomData(id){
 
-let response={RoomName:null,GameRule:null}
+let response={PlayerName:null,RoomName:null,GameRule:null}
   var fs = require('fs')
   
   try {
@@ -44,17 +44,20 @@ let response={RoomName:null,GameRule:null}
     var dataObj = JSON.parse(data)
     for(var i=0; i<dataObj.RoomInfo.length; i++) {
       if (dataObj.RoomInfo[i].RoomID===id){
+      response.PlayerName=dataObj.RoomInfo[i].PlayerName
       response.RoomName=dataObj.RoomInfo[i].RoomName
       response.GameRule=dataObj.RoomInfo[i].GameRule
+      
       }
       }
    
   
   } catch (err) {
     console.error(err)
-    
+    response.PlayerName="Not Defined"
     response.RoomName="Not Defined"
     response.GameRule="Not Defined"
+    
   }
   
 

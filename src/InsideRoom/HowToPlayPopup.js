@@ -18,6 +18,7 @@ function Popup(props){
             <Modal.Body>
               
                   {props.GameRules}
+                  
               
             </Modal.Body>
             
