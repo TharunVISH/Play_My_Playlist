@@ -6,6 +6,9 @@ import HomePage from './HomePage/HomePage';
 import CreateRoom from './Createpage/CreateRoom';
 import InsideRoom from './InsideRoom/InsideRoom';
 import JoinRoom from './JoinRoom/JoinRoom';
+import Login from './Createpage/Login/Login';
+import SignUp from './Createpage/SignUp/SignUp';
+
 
 
 import {  BrowserRouter as Router,  Switch,  Route, Redirect} from "react-router-dom";
@@ -25,6 +28,10 @@ function App() {
         <Route path='/CreatePage'   component={CreateRoom}/>
         <Route path='/InsideRoom'  component={InsideRoom}/>
         <Route path='/JoinRoom'  component={JoinRoom}/>
+        <Route path='/Login'  component={Login}/>
+        <Route path='/SignUp'  component={SignUp}/>
+        
+        
     </div>
 
     </Switch>

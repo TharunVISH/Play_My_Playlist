@@ -54,6 +54,7 @@ const Api_Url = "http://localhost:4000/api/GenerateID"
             
             <div >
             <div className="PageHeading">Create Room</div> 
+            
             <Button className="PageHeadingButton" id="RoomID" value={RoomId} variant="primary" >Room ID:{RoomId}  <FontAwesomeIcon icon={faCopy} /></Button>
             </div>
             <br/><br/><br/><br/>
@@ -61,6 +62,14 @@ const Api_Url = "http://localhost:4000/api/GenerateID"
 
           <div>
           <Form   className="InnerForm">
+               <Row>          
+                <Col sm={6} xs={12}>
+                  <Form.Group >
+                    <Form.Label className="FormLabel">Player Name:</Form.Label>
+                    <Form.Control className="FormControl" type="Text" id="PlayerName" />
+                  </Form.Group>
+                </Col>
+              </Row>
               <Row>          
                 <Col sm={6} xs={12}>
                   <Form.Group >
@@ -113,6 +122,7 @@ const Api_Url = "http://localhost:4000/api/GenerateID"
 function SendData(){
   
   var DataObj={RoomID:document.getElementById('RoomID').value,
+    PlayerName:document.getElementById('PlayerName').value,
     RoomName:document.getElementById('RoomName').value,
     ParticipentNo:document.getElementById('Participants').value,
     Passcode:document.getElementById('Passcode').value,

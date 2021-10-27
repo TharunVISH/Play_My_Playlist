@@ -28,7 +28,6 @@
             .then((data) => {
               console.log(data)
               setHowToPlay(data.GameRule);
-              
       
             });
         }, []);
