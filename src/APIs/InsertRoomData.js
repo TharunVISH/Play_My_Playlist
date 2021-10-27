@@ -1,4 +1,19 @@
 function InsertRoomData(DataObj){
+    
+    const MongoClient  = require("mongodb").MongoClient;
+    const connection_string= "mongodb://127.0.0.1:27017/"
+    MongoClient.connect(connection_string,{useUnifiedTopology:true},  (err,client)=>{
+
+    if(err) throw error;
+    console.log("connected to db")
+    var db=client.db("PlayMyPlayList_db");
+    db.collection("roomInfo").insertOne(DataObj,(err,res)=>{
+        if(err) throw error;
+        console.log("One room inserted")
+        client.close()
+    })
+
+})
 
     var fs = require('fs')
     fs.readFile('../DataBase/SavedRooms.json', function (err, data) {
@@ -22,6 +37,6 @@ function InsertRoomData(DataObj){
 
 
 
-    }
+}
 
-    module.exports =InsertRoomData
+ module.exports =InsertRoomData

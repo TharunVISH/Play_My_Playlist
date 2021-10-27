@@ -1,6 +1,10 @@
 const  express = require('express');
 const app = express()
 
+const MongoClient  = require("mongodb").MongoClient;
+    const connection_string= "mongodb://127.0.0.1:27017/"
+   
+
 app.all('/api/GenerateID', function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "X-Requested-With");
@@ -9,6 +13,8 @@ app.all('/api/GenerateID', function(req, res, next) {
 
 app.get('/api/GenerateID', function (req, res) {
   Id=Math.floor(Math.random() * 1000);
+  
+
   var Data={"Id":Id}
   res.send(Data)
 });
