@@ -56,7 +56,7 @@ function JoinRoom() {
             <div >
                 <div className="PageHeading">Join Room</div>
                 <Button className="PageHeadingButton" variant="primary">How To Play</Button>
-                <Button className="PageHeadingButton" variant="primary">sign up</Button>
+                
             </div> 
             <br/><br/><br/><br/>
 

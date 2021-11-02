@@ -36,8 +36,9 @@ export default function Login() {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
+           <br/>
         </Form.Group>
-        <Link to='/CreatePage'><Button block size="lg" type="submit" disabled={!validateForm()}> Login</Button></Link>
+        <Link to='/Home'><Button block size="lg" type="submit" disabled={!validateForm()}> Login</Button></Link>
         
       </Form>
     </div>

@@ -1,9 +1,12 @@
 @media all and (min-width: 480px) {
-    .Signup {
+  
+  .Signup {
+  background-color: bisque;
       padding: 60px 0;
     }
   
     .Signup form {
+      background-color: bisque;
       margin: 0 auto;
       max-width: 320px;
     }

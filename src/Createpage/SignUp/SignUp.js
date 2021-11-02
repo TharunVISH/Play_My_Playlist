@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import {Form,Button} from "react-bootstrap";
 import { useHistory } from "react-router-dom";
+import { Link} from "react-router-dom";
+
 
 // import LoaderButton from "../components/LoaderButton";
 // import { useAppContext } from "../lib/contextLib";
@@ -103,17 +105,9 @@ export default function SignUp() {
             // onChange={handleFieldChange}
             // value={fields.confirmPassword}
           />
+           <br/>
         </Form.Group>
-        <Button
-          block
-          size="lg"
-          type="submit"
-          variant="success"
-          isLoading={isLoading}
-          disabled={!validateForm()}
-        >
-          Signup
-        </Button>
+        <Link to='/Home'><Button block size="lg" type="submit" disabled={!validateForm()}> SignUp</Button></Link>
       </Form>
     );
   }

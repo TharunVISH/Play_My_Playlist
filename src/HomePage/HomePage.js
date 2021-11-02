@@ -14,11 +14,7 @@ function HomePage() {
 
   <div className="MainContainer">
 
-   <div>
-              <Link to='/SignUp'><Button className="PageHeadingButton" variant="primary">Sign Up</Button></Link>
-               <Link to='/Login'><Button className="PageHeadingButton" variant="primary">Log In</Button></Link>
-   </div>
-   <br/><br/> <br/>
+   
     {/*Home Page Heading*/}
     <div className= "HomePageHead">
             

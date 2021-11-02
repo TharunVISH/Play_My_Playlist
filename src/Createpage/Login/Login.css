@@ -1,12 +1,12 @@
 @media all and (min-width: 480px) {
-    .body{
-        background-color: aquamarine;
-    }
+    
     .Login {
-      padding: 60px 0;
+      background-color: bisque;
+      padding: 75px 0;
     }
   
     .Login form {
+      background-color: bisque;
       margin: 0 auto;
       max-width: 320px;
     }
