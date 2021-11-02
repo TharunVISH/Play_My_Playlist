@@ -24,26 +24,7 @@ function CreateRoom() {
   const[Participants,setParticipants]=useState(6)
 
  
-
-const Api_Url = "http://localhost:4000/api/GenerateID"
-
-// console.log("hello")
-  
-
-  const [RoomId, setRoomID] = useState(null);
-
-  
-  useEffect(() => {
-
-    fetch(Api_Url)
-      .then((res) => res.json())
-      .then((data) => {
-        setRoomID(data.Id);
-        
-        // console.log(data);
-
-      });
-  }, []);
+const RoomId="RID0000"
 
 
     return(
@@ -136,7 +117,7 @@ function SendData(){
     mode: 'cors'
     
 };
-fetch("http://localhost:5000/api/ReceiveRoomData", requestOptions)
+fetch("http://localhost:6000/api/ReceiveRoomData", requestOptions)
 }
 
 export default CreateRoom;
