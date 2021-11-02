@@ -14,8 +14,10 @@ function HomePage() {
 
   <div className="MainContainer">
 
+   
     {/*Home Page Heading*/}
     <div className= "HomePageHead">
+            
       <img className='HomePageHead1' src={PmplLogo} alt=''/>
       <div className="UnderLine"/>
       <h2 className="HomePageHead2">A Multiplayer Social Game To Play Along With Your Friends In A Private Room</h2>
@@ -24,6 +26,7 @@ function HomePage() {
 
     {/*Create Room Button*/}
     <Link to='/CreatePage' >
+            
     <Button className="BtnCreateJoinRoom"variant="primary"   >
       <h2 className="BtnHead">Create Room</h2>
       <br/><br/>
@@ -46,6 +49,7 @@ function HomePage() {
     
     {/*Button How To Play */}
     <div>
+            
     <Button variant="dark">
       <div className="BtnHowToPlay">HOW TO PLAY  <span><img className="ArrowImage" src={ArrowImage} alt="ArrowImage" /></span></div>
     </Button>
