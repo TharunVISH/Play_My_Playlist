@@ -21,8 +21,17 @@ function GetRoomID() {
     let RoomID=GetRoomID();
         let RoomInfoUrl="http://localhost:4000/api/GetRoomInfo?id="+RoomID;
         const[urlLink,seturlLink] = useState(null);
-        const [data , setData]=useState([null]);
-
+        const [fields, setFields] = useState([{
+            id: 1,
+            url:"",
+    
+          }]) 
+        const handleChangeInput = (i, e) => {
+             console.log(e.target.value);
+            const values = [...fields]
+            values[i][e.target.name] = e.target.value
+            setFields(values)
+        }  
   
         useEffect(() => {
       
@@ -34,9 +43,14 @@ function GetRoomID() {
       
             });
         }, []);
-        const handleAdd = () =>{
-            setData([...data,""]);
-        }
+        const handleAdd = (id) => {
+            setFields([...fields, { id: id + 2, url:'' }])
+          }
+          const handleRemove = (i) => {
+            const values = [...fields]
+            values.splice(i, 1)
+            setFields([...values])
+          }
      return( 
      <div>
          <div className="addMusic">
@@ -45,12 +59,11 @@ function GetRoomID() {
                 </p>
                 <br/>
                 <Form>
-               
                     <Row >
                         <Col  lg={9} md={9} sm={8} xs={7} className="PaddingRight-0">
                             <Form.Group>
                                 <InputGroup  className="inputbox" >
-                                <Form.Control   type="Text"  placeholder="paste link here" id="urlLink" />
+                                <Form.Control   type="Text"  placeholder="paste link here" id="urlLink"   />
                                 <InputGroup.Text>
                                     <button className="upbutton" >
                                         <img className="upimag"src= {Uploadbutton} alt=""/>
@@ -60,11 +73,13 @@ function GetRoomID() {
                             </Form.Group>
                         </Col>
                         <Col  lg={3} md={3} sm={4} xs={5} >
-                            <Button className="addbutton" variant="light"  onClick={handleAdd} >Add</Button>
+                            <Button className="addbutton" variant="light"  onClick={() => handleAdd()} >Add</Button>
                         </Col>
                     </Row>
+                    
                     <br/>
-                    {data.map((item)=>
+                    {fields.map((field, i)=>
+                    <div key={field.id}>
                     <Row >
             <Col lg={9} md={9} sm={8} xs={7} className="PaddingRight-0">
                 <Form.Group  >
@@ -72,7 +87,8 @@ function GetRoomID() {
                         <InputGroup.Text className="MusicSymbolContainer">
                             <img className="MusicSymbol"src= {MusicSymbol} alt=""/>
                         </InputGroup.Text>
-                        <Form.Control  className="SongTitle" type="Text"   placeholder="song title - fetched from link" disabled>{urlLink}
+                        <Form.Control  className="SongTitle" type="Text"   placeholder="song title - fetched from link"  
+                        onChange={e => handleChangeInput(i, e)} disabled>{urlLink}
                          </Form.Control>   
                         
                         <InputGroup.Text>
@@ -85,14 +101,14 @@ function GetRoomID() {
             </Col>
 
             <Col lg={3} md={3} sm={4} xs={5} >
-            <Button  className="addbutton" variant="light">
+            <Button  className="addbutton" variant="light" onClick={handleRemove}>
                 Remove
             </Button>
             </Col>
          
 
         </Row>
-        
+        </div>
             )}
            
                 </Form>
@@ -103,7 +119,7 @@ function GetRoomID() {
             </div>
      )
  }
- {/* 
+ 
  function SendData(){
   
     var DataObj={
@@ -120,6 +136,6 @@ function GetRoomID() {
   };
   fetch("http://localhost:6000/api/AddSongLink", requestOptions)
   }
-  */}
+  
 
  export default AddSong;
